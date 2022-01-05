@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--模块信息-->
+    <groupId>cool.kaikai</groupId>
+    <artifactId>WordGame</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <!--模块信息-->
+
+    <!--模块管理-->
+    <modules>
+        <module>WordGameServer</module>
+        <module>WordGameClient</module>
+    </modules>
+    <!--模块管理-->
+
+    <!--定义属性值-->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <spring.boot.version>2.6.2</spring.boot.version>
+    </properties>
+    <!--定义属性值-->
+
+    <!-- 依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot的依赖配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- SpringBoot的依赖配置-->
+        </dependencies>
+    </dependencyManagement>
+    <!-- 依赖管理 -->
+</project>
